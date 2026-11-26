@@ -2292,11 +2292,6 @@ class GlobalProcessor:
         usage: dict[str, Any] | None,
         group_id: int | None = None,
     ) -> None:
-        print(
-            f"RECORD_TURN_CHECK repo_none={self._usage_repo is None} usage={usage} "
-            f"user={user_id} agent={agent_id}",
-            flush=True,
-        )
         if self._usage_repo is None or not usage:
             return
         # 1. 记录原始日志
